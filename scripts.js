@@ -1,13 +1,4 @@
-<html>
-
-<body>
-    <h4 style="margin: 5px">How many squares have its center inside this circle ? : <span id="resultNumber"></span></h4>
-    <canvas id="cv"></canvas>
-    <br />
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
-    <script>
-
-        var gui = new dat.GUI({ name: 'Settings', width: 300 });
+var gui = new dat.GUI({ name: 'Settings', width: 300 });
         var squareFaceLength = gui.add({ squareFaceLength: 30 }, 'squareFaceLength', 2, 500, 1).onChange(function (newValue) {
             draw(squareFaceLength.object.squareFaceLength, circleRadius.object.circleRadius);
         });
@@ -106,6 +97,3 @@
         })
 
         draw(squareFaceLength.object.squareFaceLength, circleRadius.object.circleRadius);
-    </script>
-</body>
-</html>
